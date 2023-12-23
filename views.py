@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Employee
-#from django.http import HttpResponse
+from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
@@ -43,4 +43,8 @@ def deleteData(request,id):
     return redirect("/")
 
 def about(request):
+    print('Hello')
     return render(request,"about.html")
+
+def address(request):
+    return HttpResponse('Hyderabad')
